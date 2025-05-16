@@ -15,21 +15,21 @@ const RenderWindowApps = () => {
 					// In a real app, this would set state to hide the window
 					console.log("Window close button clicked!")
 				}}>
-				{/* A simple div inside the window */}
-				<div
-					style={{
-						padding: "20px",
-						backgroundColor: "#f0f0f0",
-						height: "100%",
-						boxSizing: "border-box",
-					}}>
-					<p>This is a simple div inside the Window.</p>
-					<p>Content goes here.</p>
-				</div>
+				<RenderProcessStrategy process={process} />
 			</AppWindow>,
 			document.body
 		)
 	)
 }
 
+const RenderProcessStrategy = (props: {process: number}) => {
+	switch (props.process) {
+		case 0:
+			return <div>INFOMANIAK</div>
+		case 1:
+			return <div>FINDER</div>
+		default:
+			return <div>Default</div>
+	}
+}
 export default RenderWindowApps
