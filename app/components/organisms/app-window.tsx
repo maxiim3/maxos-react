@@ -59,7 +59,7 @@ export default function AppWindow({
 			dragHandleClassName={DRAG_HANDLE_CLASS}
 			enableResizing={!isMaximized && !isMinimized}
 			disableDragging={isMaximized || isMinimized}
-			style={{border: "1px solid #ccc"}} // RND applies its own styles
+			style={{border: "1px solid #ccc", position: "relative", zIndex: "30", cursor: "none"}} // RND applies its own styles
 			onDragStop={(_e, d) => {
 				if (!isMaximized) {
 					setPosition({x: d.x, y: d.y})
@@ -92,8 +92,7 @@ export default function AppWindow({
 				<div
 					className={cn(
 						DRAG_HANDLE_CLASS,
-						"h-10 bg-slate-200/70 dark:bg-slate-700/70 flex items-center px-3 select-none",
-						isMaximized ? "cursor-default" : "cursor-grab active:cursor-grabbing"
+						"h-10 bg-slate-200/70 dark:bg-slate-700/70 flex items-center px-3 select-none"
 					)}>
 					<div className="flex space-x-2 mr-auto">
 						<button
