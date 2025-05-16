@@ -1,9 +1,8 @@
-import {CalendarDays} from "lucide-react"
+import { CalendarDays } from "lucide-react"
 import UIButton from "../atoms/ui-button"
 import UIText from "../atoms/ui-text"
-import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover"
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 import Clock from "../molecules/clock"
-import {Calendar} from "../ui/calendar"
 
 const CalendarModal = () => {
 	return (
@@ -18,7 +17,7 @@ const CalendarModal = () => {
 					</UIButton>
 				</PopoverTrigger>
 				<PopoverContent>
-					<Calendar />
+					Je suis un calendrier
 				</PopoverContent>
 			</Popover>
 		</>

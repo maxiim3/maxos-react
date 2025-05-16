@@ -3,7 +3,6 @@ import UIButton from "../atoms/ui-button"
 import UIText from "../atoms/ui-text"
 import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover"
 import Clock from "../molecules/clock"
-import {Calendar} from "../ui/calendar"
 import VolumeControl from "./volume-control"
 import BrightnessControl from "./brightness-control"
 
